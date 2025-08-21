@@ -1,4 +1,4 @@
-package com.jkdigitals.jkdigitaljetpackcompose
+package com.jkdigitals.jkdigitaljetpackcompose.presentation.signin.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.runtime.Composable

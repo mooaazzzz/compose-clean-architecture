@@ -1,4 +1,4 @@
-package com.jkdigitals.jkdigitaljetpackcompose.ui.theme
+package com.jkdigitals.jkdigitaljetpackcompose.presentation.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

@@ -1,6 +1,5 @@
-package com.jkdigitals.jkdigitaljetpackcompose.ui.theme
+package com.jkdigitals.jkdigitaljetpackcompose.presentation.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

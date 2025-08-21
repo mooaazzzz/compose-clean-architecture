@@ -1,4 +1,4 @@
-package com.jkdigitals.jkdigitaljetpackcompose
+package com.jkdigitals.jkdigitaljetpackcompose.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -19,6 +19,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ButtonDefaults.buttonColors
 import androidx.compose.material3.Checkbox
+import androidx.compose.material3.CheckboxDefaults
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -42,7 +43,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.jkdigitals.jkdigitaljetpackcompose.ui.theme.JKDigitalJetpackComposeTheme
+import com.jkdigitals.jkdigitaljetpackcompose.R
+import com.jkdigitals.jkdigitaljetpackcompose.presentation.signin.components.BackgroundImage
+import com.jkdigitals.jkdigitaljetpackcompose.presentation.ui.theme.JKDigitalJetpackComposeTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -126,7 +129,7 @@ fun Start() {
 
                     checked = checked,
                     onCheckedChange = { checked = it },
-                    colors = androidx.compose.material3.CheckboxDefaults.colors(
+                    colors = CheckboxDefaults.colors(
                         checkedColor = colorResource(id = R.color.bFFC93F),
                         uncheckedColor = colorResource(id = R.color.b697B84),
                     )
