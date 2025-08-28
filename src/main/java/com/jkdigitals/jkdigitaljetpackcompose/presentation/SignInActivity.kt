@@ -44,7 +44,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.jkdigitals.jkdigitaljetpackcompose.R
+import com.jkdigitals.jkdigitaljetpackcompose.presentation.signin.components.AppStandardButton
 import com.jkdigitals.jkdigitaljetpackcompose.presentation.signin.components.BackgroundImage
+import com.jkdigitals.jkdigitaljetpackcompose.presentation.signin.components.Edittext
 import com.jkdigitals.jkdigitaljetpackcompose.presentation.ui.theme.JKDigitalJetpackComposeTheme
 
 class MainActivity : ComponentActivity() {
@@ -69,187 +71,9 @@ fun DefaultPreview() {
     }
 }
 
-@Composable
-fun Start() {
-    Box(
-        modifier = Modifier.fillMaxSize()
-    ) {
-        var checked by remember { mutableStateOf(false) }
-        BackgroundImage(modifier = Modifier.fillMaxSize(), image = R.drawable.bg_login)
-
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(horizontal = 20.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-
-            Text(
-                modifier = Modifier.padding(top = 100.dp),
-                text = "SIGN IN",
-                color = Color.White,
-                fontSize = 40.sp,
-                fontFamily = FontFamily(
-                    Font(
-                        R.font.anebaneue_bold
-                    )
-                )
-            )
-            Text(
-                textAlign = TextAlign.Center,
-                text = "Welcome to JK Digitals!\n" +
-                        "Where creativity finds its rhythm.",
-                fontSize = 16.sp,
-                color = Color.White,
-                fontFamily = FontFamily(
-                    Font(
-                        R.font.anebaneue_regular
-                    )
-                )
-            )
-            Spacer(modifier = Modifier.height(20.dp))
-            Edittext(
-                modifier = Modifier
-                    .fillMaxWidth(), text = "Email", value = "", onValueChange = {})
-            Edittext(
-                modifier = Modifier
-                    .fillMaxWidth(), text = "Password", value = "", onValueChange = {})
-
-            Spacer(modifier = Modifier.height(10.dp))
-
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(start = 0.dp),
-
-                verticalAlignment = Alignment.CenterVertically
-            )
-            {
-                Checkbox(
-
-                    checked = checked,
-                    onCheckedChange = { checked = it },
-                    colors = CheckboxDefaults.colors(
-                        checkedColor = colorResource(id = R.color.bFFC93F),
-                        uncheckedColor = colorResource(id = R.color.b697B84),
-                    )
-                )
-
-                Text(
-                    text = "Remember me",
-                    color = Color.White,
-                    fontSize = 14.sp,
-                    fontFamily = FontFamily(Font(R.font.anebaneue_semibold))
-                )
-                Spacer(modifier = Modifier.weight(1f))
-
-                Text(
-                    fontSize = 14.sp,
-                    text = "Forgot password",
-                    color = colorResource(id = R.color.bFFC93F),
-                    fontFamily = FontFamily(Font(R.font.anebaneue_semibold)),
-                )
-            }
-
-            AppStandardButton(onClick = { /*TODO*/ }, text = "LOG IN")
-
-            Spacer(modifier = Modifier.height(20.dp))
-            Text(
-                buildAnnotatedString {
-                    withStyle(style = SpanStyle(color = Color.White)) {
-                        append("Don't have an account ")
-                    }
-                    withStyle(
-                        style = SpanStyle(colorResource(id = R.color.bFFC93F),
-                            fontFamily = FontFamily( Font(R.font.anebaneue_bold)),
-                            textDecoration = TextDecoration.Underline
-                            )
-                    ) {
-                        append("Sign Up")
-                    }
-                }
-
-            )
-        }
-    }
-}
-
-@Composable
-fun Edittext(
-    modifier: Modifier = Modifier,
-    text: String,
-    value: String,
-    onValueChange: (String) -> Unit
-) {
-    Column(modifier = modifier) {
-        Spacer(modifier = Modifier.height(20.dp))
-        Text(
-            modifier = Modifier
-                .defaultMinSize(),
-            text = text,
-            fontSize = 20.sp,
-            fontFamily = FontFamily(Font(R.font.anebaneue_bold)),
-            color = Color.White
-        )
-        Spacer(
-            modifier = Modifier
-                .height(7.dp)
-        )
-        OutlinedTextField(
-            value = value,
-            onValueChange = onValueChange,
-            modifier = Modifier
-                .fillMaxWidth()
-                .background(colorResource(id = R.color.b181818), RoundedCornerShape(10.dp)),
-            shape = RoundedCornerShape(10.dp),
-        )
-
-    }
-}
 
 
-@Composable
-fun AppStandardButton(onClick: () -> Unit, text: String) {
-    val gradient = Brush.verticalGradient(
-        colors = listOf(
-            colorResource(id = R.color.gradient_0),
-            colorResource(id = R.color.gradient_25),
-            colorResource(id = R.color.gradient_50),
-            colorResource(id = R.color.gradient_75),
-            colorResource(id = R.color.gradient_100),
-        )
-    )
 
-    Box(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 20.dp)
-            .padding(top = 20.dp)
-            .height(50.dp)
-            .background(brush = gradient, shape = RoundedCornerShape(10.dp))
-            .border(
-                width = 1.dp,
-                color = colorResource(id = R.color.gradient_0),
-                shape = RoundedCornerShape(10.dp)
-            )
-    ) {
-        Button(
-            onClick = onClick,
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(50.dp),
-            shape = RoundedCornerShape(10.dp),
-            colors = buttonColors(containerColor = Color.Transparent), // Make button background transparent
-            contentPadding = ButtonDefaults.ContentPadding
-        ) {
-            Text(
-                text = text,
-                color = colorResource(id = R.color.white),
-                fontSize = 18.sp,
-                fontFamily = FontFamily(Font(R.font.anebaneue_bold))
-            )
-        }
-    }
-}
+
 
 

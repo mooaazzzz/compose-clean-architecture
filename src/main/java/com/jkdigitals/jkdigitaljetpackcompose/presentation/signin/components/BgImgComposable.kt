@@ -24,4 +24,5 @@ fun BackgroundImage(
             blendMode = BlendMode.Darken
         )
     )
+
 }

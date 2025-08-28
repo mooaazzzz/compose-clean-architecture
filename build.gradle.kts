@@ -61,4 +61,8 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
     implementation(libs.androidx.core.splashscreen)
+
+    implementation(libs.javax.inject)
+    implementation(libs.hilt.android)
+    implementation(libs.androidx.hilt.navigation.compose)
 }
