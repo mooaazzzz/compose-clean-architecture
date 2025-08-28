@@ -1,4 +1,4 @@
-package com.jkdigitals.jkdigitaljetpackcompose.domian.model
+package com.jkdigitals.jkdigitaljetpackcompose.domain.model
 
 data class SignInRequest (
     val email: String,

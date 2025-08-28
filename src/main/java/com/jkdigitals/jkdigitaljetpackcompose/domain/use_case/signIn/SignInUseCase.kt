@@ -1,10 +1,10 @@
-package com.jkdigitals.jkdigitaljetpackcompose.domian.use_case.signIn
+package com.jkdigitals.jkdigitaljetpackcompose.domain.use_case.signIn
 
 import com.jkdigitals.jkdigitaljetpackcompose.common.Resource
 import com.jkdigitals.jkdigitaljetpackcompose.data.remote.dto.toSignInResponse
-import com.jkdigitals.jkdigitaljetpackcompose.domian.model.SignInRequest
-import com.jkdigitals.jkdigitaljetpackcompose.domian.model.SignInResponse
-import com.jkdigitals.jkdigitaljetpackcompose.domian.repository.SignInRepository
+import com.jkdigitals.jkdigitaljetpackcompose.domain.model.SignInRequest
+import com.jkdigitals.jkdigitaljetpackcompose.domain.model.SignInResponse
+import com.jkdigitals.jkdigitaljetpackcompose.domain.repository.SignInRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException

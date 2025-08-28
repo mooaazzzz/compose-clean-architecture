@@ -1,6 +1,6 @@
 package com.jkdigitals.jkdigitaljetpackcompose.presentation.signin
 
-import com.jkdigitals.jkdigitaljetpackcompose.domian.model.SignInResponse
+import com.jkdigitals.jkdigitaljetpackcompose.domain.model.SignInResponse
 
 data class SignInState(
     val isLoading: Boolean = false,

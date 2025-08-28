@@ -1,6 +1,6 @@
 package com.jkdigitals.jkdigitaljetpackcompose.data.remote.dto
 
-import com.jkdigitals.jkdigitaljetpackcompose.domian.model.SignInResponse
+import com.jkdigitals.jkdigitaljetpackcompose.domain.model.SignInResponse
 
 data class SignInResponseDto(
     val token: String,

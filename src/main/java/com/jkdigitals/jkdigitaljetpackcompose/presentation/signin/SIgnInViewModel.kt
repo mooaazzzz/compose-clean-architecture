@@ -6,7 +6,7 @@ import androidx.compose.runtime.State
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.jkdigitals.jkdigitaljetpackcompose.common.Resource
-import com.jkdigitals.jkdigitaljetpackcompose.domian.use_case.signIn.SignInUseCase
+import com.jkdigitals.jkdigitaljetpackcompose.domain.use_case.signIn.SignInUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach

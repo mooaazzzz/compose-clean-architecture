@@ -1,4 +1,4 @@
-package com.jkdigitals.jkdigitaljetpackcompose.domian.model
+package com.jkdigitals.jkdigitaljetpackcompose.domain.model
 
 import com.jkdigitals.jkdigitaljetpackcompose.data.remote.dto.Jumio
 import com.jkdigitals.jkdigitaljetpackcompose.data.remote.dto.User
